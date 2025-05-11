@@ -1,0 +1,222 @@
+/* Overall Body Styling */
+body {
+  margin: 0;
+  font-family: 'Playwrite DE Grund', serif;
+  background-color: #f4f1e1;
+  color: #0f4c75;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+
+
+/* Screen Layout for Each State  */
+.screen {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.screen.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  overflow-y: auto; 
+}
+
+/* General Heading Styling */
+h1, h2 {
+  font-family: 'Playwrite DK Loopet', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0f4c75;
+}
+
+/* Buttons for the Quiz Options */
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #50c878;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #3da264;
+}
+
+/* Question Screen Buttons */
+#question-container button {
+  background-color: white;
+  border: 2px solid #0f4c75;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 1.1rem;
+  color: #0f4c75;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+#question-container button:hover {
+  background-color: #0f4c75;
+  color: white;
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Question Header Style */
+#question-container h2 {
+  font-family: 'Playwrite DK Loopet', cursive;
+  margin-bottom: 30px;
+  color: #0f4c75;
+}
+
+/* Result Section Overlay */
+.overlay-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Result Quote Styling */
+.result-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #0f4c75;
+}
+
+/* Remove Mood Image */
+.mood-image {
+  display: none; /* Hide the mood image */
+}
+
+/* Artist Grid Styling */
+.artist-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+/* Artist Card Design - Larger Image Cards */
+/* Artist Card Design - Image-Only Cards */
+/* Artist Card Design - Image-Only Cards */
+/* Artist Card Design - Image-Only Cards */
+.artist-card {
+  padding: 0;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 250px;  
+  width: 100%;
+  box-shadow: none; 
+  margin-bottom: 10px; 
+}
+
+/* Artist Image */
+.artist-card img {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 300px; 
+  object-fit: cover; 
+}
+
+/* Artist Name */
+.artist-card p {
+  margin-top: -10px; 
+  font-size: 1rem;
+  color: #0f4c75;
+  font-family: 'Playwrite DE Grund', serif;
+  padding-top: 5px; 
+}
+
+/* Playlist & Result Description */
+#playlist-container,
+#artist-grid,
+.result-description {
+  margin-top: 20px;
+}
+
+/* Result Background Image */
+body.result-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 1s ease;
+}
+/* Result Background Colors for the White Boxes */
+.result-golden .overlay-box {
+  background-color: #F6E27F !important;  /* Golden */
+}
+
+.result-romantic .overlay-box {
+  background-color: #E2A6B2 !important;  /* Romantic Pink */
+}
+
+.result-lazy .overlay-box {
+  background-color: #faf9e8 !important;  /* Lazy Beige */
+}
+
+.result-bossa .overlay-box {
+  background-color: #AAD4C1 !important;  /* Bossa Green */
+}
+
+.result-soft .overlay-box {
+  background-color: #bfe3ff !important;  
+}
+
+/* Styling for the playlist container */
+
+#playlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  padding: 20px;
+}
+
+/* Style for the iframe */
+#playlist-container iframe {
+  width: 100%; 
+  max-width: 900px; 
+  height: 400px; 
+  border-radius: 12px; 
+  box-sizing: border-box; 
+}
+
+
+/* Hover Effect (Optional) */
+.playlist-container iframe:hover {
+  width: 95%;  
+  height: 420px;  
+}
+

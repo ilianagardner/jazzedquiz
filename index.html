@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jazzed</title>
+
+  <!-- Favicon with PNG Logo -->
+  <link rel="icon" href="jazzedlogo.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Add Inline CSS for Animation in the Head Section -->
+  <style>
+    /* Logo Animation */
+    @keyframes logoFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Logo Style */
+    .logo-container {
+      margin-bottom: 30px;
+      animation: logoFadeIn 1.5s ease-out;
+    }
+
+    .jazzed-logo {
+      width: 250px; /* Adjust logo size */
+      animation: logoFadeIn 1.5s ease-out; /* Animation */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Start Page -->
+  <section id="start" class="screen active">
+    <!-- Logo Section -->
+    <div class="logo-container">
+      <!-- Ensure the src points to the correct path of your logo -->
+      <img src="jazzedlogo.png" alt="Jazzed Logo" class="jazzed-logo">
+    </div>
+
+    <h1>Need a jazz rec?</h1>
+    <p>Take the quiz. Get jazzed.</p>
+    <button id="start-button">Start Quiz</button>
+  </section>
+
+  <!-- Question Page -->
+  <section id="question" class="screen">
+    <div id="question-container"></div> <!-- All content goes here dynamically -->
+  </section>
+
+  <!-- Result Page -->
+  <section id="result" class="screen">
+    <div id="result-content" class="overlay-box">
+      <h2 id="result-title"></h2>
+      <p id="result-quote" class="result-quote"></p>
+
+     
+
+      <div id="playlist-container"></div>
+
+      <div id="artist-grid" class="artist-grid"></div>
+
+      <p id="result-description" class="result-description"></p>
+
+      <button onclick="restartQuiz()">Take Quiz Again</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
