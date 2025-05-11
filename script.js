@@ -67,7 +67,59 @@ const results = {
     background: "url('gold.jpg')",
     quote: "A classic never goes out of style."
   },
-  // (other mood types are the same as before)
+  romantic: {
+    title: "Velvet Romance",
+    description: "Sultry, dim-lit jazz for candlelit moments and slow dances.",
+    playlist: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76YsWjvbz9I?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+    artists: [
+      { name: "Norah Jones", image: "norah.png" },
+      { name: "Chet Baker", image: "chet.png" },
+      { name: "Julie London", image: "julie.png" }
+    ],
+    color: "#E2A6B2",
+    background: "url('velvet-main.jpg')",
+    featureImage: "velvet-main.jpeg",
+    quote: "Dim lights. Slow tempos. Full hearts."
+  },
+  lazy: {
+    title: "Lazy Cat Swing",
+    description: "Slow, smooth jazz perfect for rainy naps and cozy corners.",
+    playlist: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWTcEjayzrZ4x?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+   artists: [
+      { name: "Bill Evans", image: "bill.png" },
+      { name: "Melody Gardot", image: "melody.png" },
+      { name: "Laufey", image: "laufey.png" }
+    ],
+    color: "#faf9e8",
+    background: "url('lazy.jpg')",
+    quote: "Take it slow and enjoy the music."
+  },
+  bossa: {
+    title: "Rio Reverie",
+    description: "Dreamy bossa beats to make life feel like a film set in Brazil.",
+    playlist: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWgccrbg3zbJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+    artists: [
+      { name: "João Gilberto", image: "jo.png" },
+      { name: "Astrud Gilberto", image: "astrud.png" },
+      { name: "Stan Getz", image: "stan.png" }
+    ],
+    color: "#AAD4C1",
+    background: "url('brazil.jpg')",
+    quote: "Let the rhythm of Brazil sweep you away."
+  },
+  soft: {
+    title: "Featherlight Feel",
+    description: "Airy and modern jazz for calm, focused energy and soft vibes.",
+    playlist: `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX949uWWpmTjT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`,
+    artists: [
+      { name: "Diana Krall", image: "diana.png" },
+      { name: "Hiromi", image: "hiromi.png" },
+      { name: "Snarky Puppy", image: "snarky.png" }
+    ],
+    color: "#DCD6F7",
+    background: "url('velvet.jpg')",
+    quote: "Light as air, smooth as silk."
+  }
 };
 
 // 3. State to track answers
@@ -134,8 +186,8 @@ function showResult() {
 
   // Set the result title, description, quote, and playlist
   document.getElementById('result-title').textContent = result.title;
-  document.getElementById('result-quote').textContent = result.quote || ''; // Ensure this shows an empty string if no quote
-  document.getElementById('result-description').textContent = result.description || "No description available."; // Provide a fallback if description is missing
+  document.getElementById('result-quote').textContent = result.quote || ''; 
+  document.getElementById('result-description').textContent = result.description || "No description available."; 
   document.getElementById('playlist-container').innerHTML = result.playlist;
 
   // Render artist cards
@@ -178,3 +230,4 @@ function restartQuiz() {
 
 // 10. Add event listener for the Start button
 document.getElementById('start-button').addEventListener('click', goToQuestion);
+
