@@ -114,9 +114,9 @@ button:hover {
   color: #0f4c75;
 }
 
-/* Remove Mood Image */
+
 .mood-image {
-  display: none; /* Hide the mood image */
+  display: none; 
 }
 
 /* Artist Grid Styling */
@@ -129,9 +129,6 @@ button:hover {
 }
 
 /* Artist Card Design - Larger Image Cards */
-/* Artist Card Design - Image-Only Cards */
-/* Artist Card Design - Image-Only Cards */
-/* Artist Card Design - Image-Only Cards */
 .artist-card {
   padding: 0;
   border-radius: 10px;
@@ -214,7 +211,7 @@ body.result-background {
 }
 
 
-/* Hover Effect (Optional) */
+/* Hover Effect  */
 .playlist-container iframe:hover {
   width: 95%;  
   height: 420px;  
